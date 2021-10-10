@@ -145,7 +145,7 @@
     grid-gap: 1rem;
     gap: 1rem;
     align-items: start;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(30%, 50%));
     /* grid-template-columns: repeat(auto-fit, minmax(20%, auto)); */
 }
 .data-list .list-body-grid .list-item{
@@ -224,7 +224,7 @@
     
 
     .data-list .list-body-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(50%, 100%));
     } 
 }
 /*스마트폰 가로*/
@@ -235,7 +235,7 @@
 @media screen and (max-width: 320px) {
     
     .data-list .list-body-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, minmax(50%, 100%));
     }
 }
 /*iphone4와 같은 높은 크기세로*/
