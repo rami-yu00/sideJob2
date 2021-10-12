@@ -62,12 +62,17 @@
 
     //화면 사이즈가 변경됬을때 레이아웃 세팅 
     $(window).resize(function() { 
+        var width_size = window.outerWidth;
 
-        //헤더 메뉴리스트 닫기 
-        $('#menu_list').removeClass('is-open');
-        $('#menu_list').slideUp();
+        if (width_size <640) {
+             //헤더 메뉴리스트 닫기 
+            $('#menu_list').removeClass('is-open');
+            $('#menu_list').slideUp();
+        }   
+       
 
     });
+
 
     </script>
 </head>
