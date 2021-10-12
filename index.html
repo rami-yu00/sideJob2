@@ -9,116 +9,22 @@
     <link rel="stylesheet" type="text/css" href="src/css/header-footer.css">
     <link rel="stylesheet" type="text/css" href="src/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
     <script>
-
     $(function(){
-
-        //메뉴오픈 이벤트
-        $('.menu_open').click(function(){
-            var href = $(this).attr('href');
-            layer_popup(href);
-        });
-
-        //레이어 팝업 오픈 이벤트
-        $('.popup_open').click(function(){
-            var href = $(this).attr('href');
-            layer_popup(href);
-        });
-        $('.popup_close').click(function(){
-            var href = $(this).attr('href');
-            layer_popup(href);
-        });
+        $(document).ready(function(){
+             $(".header").load("header.html");
+             $(".footer").load("footer.html");
+            /* id 지정을 통해서도 가능합니다. 
+             $("#header").load("header.html");
+             */ 
+        });      
     });
-
-    //메뉴 오픈 , 레이어팝업 이벤트 function
-    function layer_popup(el){
-        var $el = $(el);
-
-        switch (el) {
-            case '#popup_login': //로그인 팝업 창일때
-
-                if($el.hasClass('is-open')) {
-                    $el.fadeOut("fast");
-                    $el.removeClass('is-open');
-                    break;
-                }else{
-                    $el.fadeIn("fast");
-                    $el.addClass('is-open');
-                    break;
-                }
-            case '#menu_list': //메뉴리스트 일때
-                
-                if($el.hasClass('is-open')){
-                    $el.slideUp();
-                    $el.removeClass('is-open');
-                    break;
-                } else {
-                    $el.slideDown();
-                    $el.addClass('is-open');
-                    break;
-                }       
-        }
-    }
-
-    //화면 사이즈가 변경됬을때 레이아웃 세팅 
-    $(window).resize(function() { 
-        var width_size = window.outerWidth;
-
-        if (width_size <640) {
-             //헤더 메뉴리스트 닫기 
-            $('#menu_list').removeClass('is-open');
-            $('#menu_list').slideUp();
-        }   
-       
-
-    });
-
-
     </script>
 </head>
 <body>
-    <header id="header">
-        <section class="top-area">
-            <div class="title-wrap">
-                <h1>Hello World</h1>
-                <a class="top-title"></a>
-                <button href="#menu_list" class="menu btn menu_open">버튼</button>
-            </div>
-            <div class="link-wrap">
-                <div>
-                    <button href="#popup_login" class="popup_open">로그인</button>
-                    <button>회원가입</button>
-                </div>
-            </div>
-        </section>
-        <section id="menu_list" class="middle-area">
-            <nav class="nav">
-                <ul>
-                    <li>
-                        <a href="#;" title="공지사항 이동"></a>
-                        <span>공지사항</span>
-                    </li>
-                    <li>
-                        <a href="#;" title="자유게시판 이동"></a>
-                        <span>자유게시판</span>
-                    </li>
-                    <li>
-                        <a href="#;" title="갤러리 이동"></a>
-                        <span>갤러리</span>
-                    </li>
-                </ul>
-            </nav>
-
-            <form id="searchFrm">
-                <div class="search">
-                    <div>
-                        <input type="search">
-                    </div>
-                    <button>검색</button>
-                </div>
-            </form>
-        </section>
-    </header>
+    <div class="header">
+    </div>
     <main id="main">
         <section class="main-top">
             <div class="main-header">
@@ -129,7 +35,7 @@
                 <div class="data-list">
                     <div class="list-title">
                         <h3>공지사항</h3>
-                        <a href="#;" title="공지사항 더보기">더보기</a>
+                        <a href="notice.html" title="공지사항 더보기">더보기</a>
                     </div>
                     <div class="list-body">
                         <dl>
@@ -301,39 +207,8 @@
             </div>
         </section>
     </main>
-    <footer id="footer">
-        <p class="copy">
-            Copyright © 2021 
-        </p>
-    </footer>
+    <div class="footer">
 
-    <article id="popup_login" class="dim-layer">
-        <div href="#popup_login" class="dimBg popup_close"></div>
-        <div class="pop-layer">
-            <div class="pop-container">
-                <div class="con-header">
-                    <h2>로그인</h2>
-                    <button href="#popup_login" class="popup_close">닫기</button>
-                </div>
-                <div class="con-main">
-                    <form class="loginForm">
-                        <p>
-                            <label>ID</label>
-                            <input type="text" placeholder="아이디 입력">
-                        </p>
-                        <p>
-                            <label>PW</label>
-                            <input type="password" placeholder="패스워드 입력">
-                        </p>
-                        <button class="btn btn-dk">로그인</button>
-                    </form>
-                    <p class="link-wrap">
-                        <a class="btn">아디디/비밀번호 찾기</a>
-                        <a class="btn">회원가입</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </article>
+    </div>
 </body>
 </html>

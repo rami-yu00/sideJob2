@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer id="footer">
+        <p class="copy">
+            Copyright © 2021 
+        </p>
+    </footer>
+
+    <article id="popup_login" class="dim-layer">
+        <div href="#popup_login" class="dimBg popup_close"></div>
+        <div class="pop-layer">
+            <div class="pop-container">
+                <div class="con-header">
+                    <h2>로그인</h2>
+                    <button href="#popup_login" class="popup_close">닫기</button>
+                </div>
+                <div class="con-main">
+                    <form class="loginForm">
+                        <p>
+                            <label>ID</label>
+                            <input type="text" placeholder="아이디 입력">
+                        </p>
+                        <p>
+                            <label>PW</label>
+                            <input type="password" placeholder="패스워드 입력">
+                        </p>
+                        <button class="btn btn-dk">로그인</button>
+                    </form>
+                    <p class="link-wrap">
+                        <a class="btn">아디디/비밀번호 찾기</a>
+                        <a class="btn">회원가입</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        $(function(){
+            
+    
+            //메뉴오픈 이벤트
+            $('.menu_open').click(function(){
+                var href = $(this).attr('href');
+                layer_popup(href);
+            });
+    
+            //레이어 팝업 오픈 이벤트
+            $('.popup_open').click(function(){
+                var href = $(this).attr('href');
+                layer_popup(href);
+            });
+            $('.popup_close').click(function(){
+                var href = $(this).attr('href');
+                layer_popup(href);
+            });
+        });
+    
+        //메뉴 오픈 , 레이어팝업 이벤트 function
+        function layer_popup(el){
+            var $el = $(el);
+    
+            switch (el) {
+                case '#popup_login': //로그인 팝업 창일때
+    
+                    if($el.hasClass('is-open')) {
+                        $el.fadeOut("fast");
+                        $el.removeClass('is-open');
+                        break;
+                    }else{
+                        $el.fadeIn("fast");
+                        $el.addClass('is-open');
+                        break;
+                    }
+                case '#menu_list': //메뉴리스트 일때
+                    
+                    if($el.hasClass('is-open')){
+                        $el.slideUp();
+                        $el.removeClass('is-open');
+                        break;
+                    } else {
+                        $el.slideDown();
+                        $el.addClass('is-open');
+                        break;
+                    }       
+            }
+        }
+    
+        //화면 사이즈가 변경됬을때 레이아웃 세팅 
+        $(window).resize(function() { 
+            var width_size = window.outerWidth;
+    
+            if (width_size <640) {
+                 //헤더 메뉴리스트 닫기 
+                $('#menu_list').removeClass('is-open');
+                $('#menu_list').slideUp();
+            }   
+           
+    
+        });
+        </script>
+</body>
+</html>
