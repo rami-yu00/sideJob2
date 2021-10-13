@@ -312,23 +312,20 @@ only screen and(min-device-pixel-ratio : 1.5) {
         display: grid;
         gap: .5rem;
         grid-template-columns: 50% 50%;
-        justify-content: center;
 
         /* box-sizing: border-box; */
     }
-    .data-list .list-body-grid{
+    /* .data-list .list-body-grid{
         grid-template-columns: repeat(3, minmax(30%, 50%));
-    }
+    } */
 }
 /*데스크탑 브라우저 가로*/
 @media screen and (min-width: 1225px){
-    .data-list .list-body-grid{
+    /* .data-list .list-body-grid{
         grid-template-columns: repeat(3, minmax(30%, 50%));
-    }
+    } */
 }
 /*큰 모니터*/
 @media screen and (min-width: 1824px){
-    .data-list .list-body-grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
+
 }

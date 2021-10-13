@@ -1,213 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/common.css">
-    <!-- <link rel="stylesheet" type="text/css" href="src/css/header-footer.css"> -->
-    <link rel="stylesheet" href="src/css/notice.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $(function(){
-            $(document).ready(function(){
-                 $(".header").load("header.html");
-                 $(".footer").load("footer.html");
-                /* id 지정을 통해서도 가능합니다. 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="src/css/common.css">
+        <!-- <link rel="stylesheet" type="text/css" href="src/css/header-footer.css"> -->
+        <link rel="stylesheet" href="src/css/notice.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+                $(document).ready(function() {
+                    $(".header").load("header.html");
+                    $(".footer").load("footer.html");
+                    /* id 지정을 통해서도 가능합니다. 
                  $("#header").load("header.html");
-                 */ 
-            });      
-        });
-    </script>
-</head>
-<body>
-    <div class="header">
-    </div>
-    <article class="notice">
-        <div class="board content-wrap">
-            <section class="board-top">
-                <div class="bd-title-wrap">
-                    <div class="title">
-                        <h2>공지사항</h2>
-                        <p>(20건)</p>
+                 */
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header"></div>
+        <article class="notice">
+            <div class="board content-wrap">
+                <section class="board-top">
+                    <div class="bd-title-wrap">
+                        <div class="title">
+                            <h3>공지사항</h3>
+                            <p>(20건)</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-dk">글쓰기</a>
+                        </div>
                     </div>
+                    <div class="gb-hr hr-bold"></div>
+                    <form class="bd-searchFrm">
+                        <select>
+                            <option>선택</option>
+                            <option>제목</option>
+                            <option>내용</option>
+                            <option>작성자</option>
+                        </select>
+                        <div class="srch-wrap">
+                            <input type="search">
+                        </div>
+                        <button>검색</button>
+                    </form>
+                    <div class="gb-hr "></div>
+                </section>
+                <section class="board-mid">
+                    <table border="1" class="table">
+                        <tbody>
+                            <tr>
+                                <td class="tb-item">
+                                    <table class="sub-table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1 </td>
+                                                <td>
+                                                    <div>
+                                                        <h4>제목입니다.</h4>
+                                                        <span>[1]</span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2">댓글</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>작성자</span>
+                                                        <span>2021/10/12</span>
+                                                        <span>조회수 0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tb-item">
+                                    <table class="sub-table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1 </td>
+                                                <td>
+                                                    <div>
+                                                        <h4>제목입니다.</h4>
+                                                        <span>[1]</span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2">댓글</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>작성자</span>
+                                                        <span>2021/10/12</span>
+                                                        <span>조회수 0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tb-item">
+                                    <table class="sub-table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1 </td>
+                                                <td>
+                                                    <div>
+                                                        <h4>제목입니다.</h4>
+                                                        <span>[1]</span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2">댓글</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>작성자</span>
+                                                        <span>2021/10/12</span>
+                                                        <span>조회수 0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tb-item">
+                                    <table class="sub-table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1 </td>
+                                                <td>
+                                                    <div>
+                                                        <h4>제목입니다.</h4>
+                                                        <span>[1]</span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2">댓글</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>작성자</span>
+                                                        <span>2021/10/12</span>
+                                                        <span>조회수 0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tb-item">
+                                    <table class="sub-table" border="1">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">1 </td>
+                                                <td>
+                                                    <div>
+                                                        <h4>제목입니다.</h4>
+                                                        <span>[1]</span>
+                                                    </div>
+                                                </td>
+                                                <td rowspan="2">댓글</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <span>작성자</span>
+                                                        <span>2021/10/12</span>
+                                                        <span>조회수 0</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="board-btm">
                     <div>
-                        <a href="#" class="btn btn-dk">글쓰기</a>
+                        <a href="#;">이전</a>
+                        <a href="#;">1</a>
+                        <a href="#;">2</a>
+                        <a href="#;">3</a>
+                        <a href="#;">4</a>
+                        <a href="#;">5</a>
+                        <a href="#;">다음</a>
                     </div>
-                </div>
-                <div class="gb-hr hr-bold"></div>
-                <form class="bd-searchFrm">
-                    <select>
-                        <option>선택</option>
-                        <option>제목</option>
-                        <option>내용</option>
-                        <option>작성자</option>
-                    </select>
-                    <div class="srch-wrap">
-                        <input type="search">
-                    </div>
-                    <button>검색</button>
-                </form>
-                <div class="gb-hr "></div>
-            </section>
-            <section class="board-mid">
-                <table border="1" class="table">
-                    <tbody>
-                        <tr>
-                            <td class="tb-item">
-                                <table class="sub-table" border="1">
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2"> 1 </td>
-                                            <td>
-                                                <div>
-                                                    <h3>제목입니다.</h3>
-                                                    <span> [1]</span>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2"> 댓글</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <span>작성자</span>
-                                                    <span>2021/10/12</span>
-                                                    <span>조회수 0</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tb-item">
-                                <table class="sub-table" border="1">
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2"> 1 </td>
-                                            <td>
-                                                <div>
-                                                    <h3>제목입니다.</h3>
-                                                    <span> [1]</span>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2"> 댓글</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <span>작성자</span>
-                                                    <span>2021/10/12</span>
-                                                    <span>조회수 0</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tb-item">
-                                <table class="sub-table" border="1">
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2"> 1 </td>
-                                            <td>
-                                                <div>
-                                                    <h3>제목입니다.</h3>
-                                                    <span> [1]</span>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2"> 댓글</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <span>작성자</span>
-                                                    <span>2021/10/12</span>
-                                                    <span>조회수 0</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tb-item">
-                                <table class="sub-table" border="1">
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2"> 1 </td>
-                                            <td>
-                                                <div>
-                                                    <h3>제목입니다.</h3>
-                                                    <span> [1]</span>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2"> 댓글</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <span>작성자</span>
-                                                    <span>2021/10/12</span>
-                                                    <span>조회수 0</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tb-item">
-                                <table class="sub-table" border="1">
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2"> 1 </td>
-                                            <td>
-                                                <div>
-                                                    <h3>제목입니다.</h3>
-                                                    <span> [1]</span>
-                                                </div>
-                                            </td>
-                                            <td rowspan="2"> 댓글</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div>
-                                                    <span>작성자</span>
-                                                    <span>2021/10/12</span>
-                                                    <span>조회수 0</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="board-btm">
-                <div>
-                    <a href="#;">이전</a>
-                    <a href="#;">1</a>
-                    <a href="#;">2</a>
-                    <a href="#;">3</a>
-                    <a href="#;">4</a>
-                    <a href="#;">5</a>
-                    <a href="#;">다음</a>
-                </div>
-            </section>
-        </div>
-        
-    </article>
-    <div class="footer">
-
-    </div>
-</body>
+                </section>
+            </div>
+        </article>
+        <div class="footer"></div>
+        <!-- Code injected by live-server -->
+        <script type="text/javascript">
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket'in window) {
+                (function() {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function(msg) {
+                        if (msg.data == 'reload')
+                            window.location.reload();
+                        else if (msg.data == 'refreshcss')
+                            refreshCSS();
+                    }
+                    ;
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                }
+                )();
+            } else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
+    </body>
 </html>

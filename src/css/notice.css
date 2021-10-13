@@ -1,183 +1,190 @@
-.notice{
+.notice {
     background-color: var(--main-font-wh);
 }
-.board{
+
+.board {
     display: block;
     padding: 4.6rem .8rem .8rem;
     background-color: var(--main-font-wh);
 }
-.gb-hr{
+
+.gb-hr {
     width: 100%;
     margin: 1rem 0 0 ;
     border-bottom: 1px solid var(--desc-line-color);
 }
-.gb-hr.hr-bold{
+
+.gb-hr.hr-bold {
     margin: 2rem 0 1rem;
     border-bottom: 2px solid var(--footer-bg-color);
 }
-.board .board-top .bd-title-wrap{
+
+.board .board-top .bd-title-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     padding-top: 1rem;
 }
-.board .board-top .bd-title-wrap .title{
+
+.board .board-top .bd-title-wrap .title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
     white-space: nowrap;
 }
 
-.board .board-top .bd-searchFrm{
+.board .board-top .bd-searchFrm {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.board .board-top .bd-searchFrm select{
+
+.board .board-top .bd-searchFrm select {
     padding: 9px;
     border: 1px solid var(--desc-line-color);
     border-radius: 2px 0 0 2px;
 }
 
-.board .board-top .bd-searchFrm .srch-wrap{
+.board .board-top .bd-searchFrm .srch-wrap {
     flex: 1 1 100%;
     padding: 9px;
     border: 1px solid var(--desc-line-color);
 }
+
 .srch-wrap input[type='search'] {
     width: 100%;
     height: 100%;
-
     border: 0;
 }
 
-.board .board-top .bd-searchFrm button{
-    padding:  9px 0.8rem;
+.board .board-top .bd-searchFrm button {
+    padding: 9px 0.8rem;
     white-space: nowrap;
-    border-radius:  0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
 }
 
 /* .table { 
     border-top: 2px solid red;
     border-bottom: 2px solid red; 
 } */
-.table{
+.table {
     width: 100%;
     /* border-top: 1px solid var(--footer-font-rgrey); */
     /* border-bottom: 1px solid var(--footer-font-rgrey); */
 }
-.table .tb-item{
+
+.table .tb-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.table .tb-item span{
+
+.table .tb-item span {
     white-space: nowrap;
 }
-.table .tb-item >span:nth-child(1){
+
+.table .tb-item >span:nth-child(1) {
     display: block;
     width: 3rem;
     text-align: center;
 }
-.sub-table { 
+
+.sub-table {
     width: 100%;
     padding: .4rem 0;
     border-bottom: 1px solid var(--desc-line-color);
 }
-.sub-table tr:nth-child(1) td:nth-child(1) div{
-    display: flex; 
+
+.sub-table tr:nth-child(1) td:nth-child(1) div {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.sub-table tr:nth-child(1) td:nth-child(1) h3{
+.sub-table tr:nth-child(1) td:nth-child(1) h3 {
     margin-right: .4rem;
 }
 
-.sub-table tr:nth-child(2) td:nth-child(1) div{
-    display: flex; 
+.sub-table tr:nth-child(2) td:nth-child(1) div {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.sub-table tr:nth-child(2) td:nth-child(1) div span{
+
+.sub-table tr:nth-child(2) td:nth-child(1) div span {
     white-space: nowrap;
 }
-.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(1){
+
+.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(1) {
     width: 5rem;
 }
-.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(2){
+
+.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(2) {
     width: 6rem;
 }
-.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(3){
+
+.sub-table tr:nth-child(2) td:nth-child(1) div span:nth-child(3) {
     width: 5rem;
 }
-/*스마트폰 가로+세로*/
-@media screen and (min-width: 320px) and (max-width: 480px){
 
+/*스마트폰 가로+세로*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
 }
 
 /*스마트폰 가로*/
 @media screen and (min-width: 321px) {
-    
 }
 
 /*스마트폰 세로*/
 @media screen and (max-width: 320px) {
-
 }
 
 /*iphone4와 같은 높은 크기세로*/
-@media
-only screen and(-webkit-min-device-pixel-ratio : 1.5),
-only screen and(min-device-pixel-ratio : 1.5) {
-    
+@media only screen and(-webkit-min-device-pixel-ratio : 1.5), only screen and(min-device-pixel-ratio : 1.5) {
 }
 
 /*iphone4와 같은 높은 해상도 가로*/
-@media screen and (min-width: 640px){
-
-    .board{
+@media screen and (min-width: 640px) {
+    .board {
         padding: 8rem .8rem .8rem;
     }
-    .board .board-top .bd-searchFrm{
+
+    .board .board-top .bd-searchFrm {
         width: 50% !important;
     }
 }
-@media screen and (min-width: 768px) {
 
+@media screen and (min-width: 768px) {
 }
+
 /* iPad가로+세로 */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px ){
-    
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px ) {
 }
+
 /* iPad가로*/
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px ) and (orientation : landscape) {
-    
 }
 
 /* iPad세로*/
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px ) and (orientation : portrait) {
-    
 }
 
 /*태블릿 해상도 사이즈*/
-@media screen and (min-width: 768px) and (max-width: 1024px ){
-
+@media screen and (min-width: 768px) and (max-width: 1024px ) {
 }
+
 /*데스크탑 브라우저 가로*/
-@media screen and (min-width: 1025px){
-    .board .board-top .bd-searchFrm{
+@media screen and (min-width: 1025px) {
+    .board .board-top .bd-searchFrm {
         width: 40% !important;
     }
 }
+
 /*데스크탑 브라우저 가로*/
-@media screen and (min-width: 1225px){
-
+@media screen and (min-width: 1225px) {
 }
-/*큰 모니터*/
-@media screen and (min-width: 1824px){
 
+/*큰 모니터*/
+@media screen and (min-width: 1824px) {
 }
