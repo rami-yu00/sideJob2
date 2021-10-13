@@ -1,9 +1,16 @@
 #main{
     display: block;
-    background-color: var(--main-bg-m-grey);
-    padding: 4.6rem .8rem .8rem;
+    background-color: var(--main-font-wh);
+    
 }
-
+.bg-main{
+    background-color: var(--mid-bg-color);
+}
+.main{
+    box-sizing: border-box;
+    padding: 4rem 0 0;
+    margin: 0 auto;
+} 
 .main-top{
     display: flex;
     flex-direction: column;
@@ -16,7 +23,7 @@
     min-height: 8rem;
     height: 100%;
 
-    border-radius: 3px;
+    /* border-radius: 3px; */
     margin-bottom: .5rem;
 
     display: flex;
@@ -53,7 +60,7 @@
 
     background-color: #ffffff;
     margin-bottom: .5rem;
-    border-radius: .3rem;
+    /* border-radius: .3rem; */
 }
 
 .data-list .list-title {
@@ -140,6 +147,12 @@
                         .con
     -- Gallery Board STYLE -- 
     ##################################################### */
+.gallery{
+    background-color: #fff;
+    margin-bottom: .5rem;
+    border-radius: .3rem;
+}
+
 .data-list .list-body-grid{
     display: grid;
     grid-gap: 1rem;
@@ -246,12 +259,26 @@ only screen and(min-device-pixel-ratio : 1.5) {
 }
 /*iphone4와 같은 높은 해상도 가로*/
 @media screen and (min-width: 640px){
-    #main{
-        background-color: var(--main-bg-m-grey);
+
+    .main{
         padding: 8rem .8rem .8rem;
+        margin: 0 auto;
+/* 
+        box-sizing: border-box; */
     }
+    .main-top .main-header{
+        border-radius: 3px;
+    }
+    .data-list{
+        border-radius: .3rem;
+    }
+
     .data-list .list-body-grid{
         grid-template-columns: repeat(3, minmax(30%, 50%));
+    }
+
+    .gallery{
+        border-radius: .3rem;
     }
 }
 @media screen and (min-width: 768px) {
@@ -281,10 +308,13 @@ only screen and(min-device-pixel-ratio : 1.5) {
 }
 /*데스크탑 브라우저 가로*/
 @media screen and (min-width: 1025px){
-    #main{
+    .main{
         display: grid;
         gap: .5rem;
         grid-template-columns: 50% 50%;
+        justify-content: center;
+
+        /* box-sizing: border-box; */
     }
     .data-list .list-body-grid{
         grid-template-columns: repeat(3, minmax(30%, 50%));

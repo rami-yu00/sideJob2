@@ -1,7 +1,15 @@
 /*  #############################################
     -- 헤더, 풋터 CSS 적용
     ############################################*/
-
+    .header-wrap{
+        color: var(--main-font-wh);
+        box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 10%);
+        background-color: #607d8b;
+    }
+    .content-wrap{
+        width: 100%;
+        /* margin: 0 auto; */
+    }
 /* --------------- 헤더 ----------------*/
 #header{
     position: fixed;
@@ -11,12 +19,6 @@
     width: 100%;
     background-color: var(--main-bg-color);
 }
-#header, .top-area {
-    color: var(--main-font-wh);
-    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 10%);
-
-    
-}
 
 #header .top-area{
     display: flex;  
@@ -24,7 +26,7 @@
     flex-direction: row;
     align-items: center;
 
-    background-color: #607d8b;
+    
     padding: .8rem;
 }
 #header .top-area .title-wrap {
@@ -109,7 +111,7 @@
     left: 0;
     cursor: pointer;
 }
-input[type="search"]{
+/* input[type="search"]{
     display: block;
     outline: none;
     border: none;
@@ -126,8 +128,9 @@ input[type="search"]{
     flex: 1 auto;
     border: 1px solid #ddd;
 }
+ */
 /* hover style */
-#header .middle-area .nav ul li:hover, .search:hover{
+#header .middle-area .nav ul li:hover{
     background-color: var(--sub-bg-color);
 }
 
@@ -176,9 +179,9 @@ only screen and(min-device-pixel-ratio : 1.5) {
 /*iphone4와 같은 높은 해상도 가로*/
 @media screen and (min-width: 640px){
 
-    #searchFrm .search{
+    /* #searchFrm .search{
         padding: .8rem 0;
-    }
+    } */
     #header .top-area .menu{
         display: none;
     }
@@ -186,11 +189,15 @@ only screen and(min-device-pixel-ratio : 1.5) {
         display: none;
     }
     #header .middle-area{
-        display: grid !important;
+        /* display: grid !important; */
+        display: flex;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
-        padding: 0 .8rem 0 0;
+        padding: 0 .8rem 0 .8rem;
     }
-
+    #header .middle-area .nav{
+        flex: 100%;
+    }
     #header .middle-area .nav ul{
         display: flex;
         justify-content: space-between;
@@ -226,8 +233,10 @@ only screen and(min-device-pixel-ratio : 1.5) {
 }
 /*데스크탑 브라우저 가로*/
 @media screen and (min-width: 1025px){
-
-    
+    .content-wrap{
+        width: 1024px !important;
+        margin: 0 auto;
+    }
 }
 /*큰 모니터*/
 @media screen and (min-width: 1824px){

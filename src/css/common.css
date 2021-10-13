@@ -3,9 +3,10 @@
     * var(--main-bg-color);
     ############################################*/
     :root {
+        --mid-bg-color:#f3f3f3;
         --main-bg-color: #607d8b;
         --sub-bg-color: #6f8c9b;
-        --main-font-wh: #fff;
+        --main-font-wh: #fbfbfb;
         --main-bg-m-grey: #ddd;
         --footer-bg-color: #666;
         --footer-font-rgrey: #aaa;
@@ -13,6 +14,7 @@
         --board-col-hover-color :#e9e9e973;
         --main-hover-color: #8da4b1;
         --denger-color: #f44336;
+
     }
 
 /*  #############################################
