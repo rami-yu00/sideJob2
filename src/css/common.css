@@ -62,6 +62,7 @@ a:hover {
 }
 
 button, .btn {
+    display: inline-block;
     border: 1px solid var(--desc-line-color);
     border-radius: 2px;
     padding: .4rem .8rem;

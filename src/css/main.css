@@ -119,7 +119,7 @@
     flex: 0 0 25%;
     text-align: right;
 }
-.data-list .list-body .list-item .noti{
+.data-list .list-body .list-item .noti, .noti{
     flex: 0 0 auto;
     margin-right: .4rem;
 }
@@ -128,7 +128,7 @@
     margin-right: .4rem;
     text-align: left;
 }
-.data-list .list-body .list-item .noti strong{
+.data-list .list-body .list-item .noti strong, .noti strong{
 
     display: inline-block;
     padding: 0 5px;
