@@ -2,9 +2,10 @@
 -- 헤더, 풋터 CSS 적용
 ############################################*/
 .header-wrap {
-    color: var(--main-font-wh);
-    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 10%);
-    background-color: #607d8b;
+    color: #000;
+    border-bottom: 1px solid #f6f6f6;;
+    box-shadow: 0px 4px 12px -4px rgb(0 0 0 / 10%);
+    background-color: var(--main-bg-color);
 }
 
 .content-wrap {
@@ -28,6 +29,7 @@
     flex-direction: row;
     align-items: center;
     padding: .8rem;
+    height: 67px;
 }
 
 #header .top-area .title-wrap {
@@ -38,15 +40,16 @@
 
 #header .top-area .title-wrap h1 {
     margin-right: .5rem;
+    text-transform: uppercase;
 }
 
 #header .top-area .menu.btn {
     display: block;
     position: relative;
     font-size: 0;
-    border: 0;
-    /* border: 1px solid var(--sub-bg-color); */
-    box-shadow: 2px 2px 0px 0px rgb(92 109 116 / 62%), inset 2px 2px 13px 0px rgb(92 109 116 / 62%);
+    /* border: ; */
+    border: 1px solid rgb(51 51 51 / 19%);
+    /* box-shadow: 2px 2px 0px 0px rgb(92 109 116 / 62%), inset 2px 2px 13px 0px rgb(92 109 116 / 62%); */
     border-radius: 3px;
     padding: 5px;
     background-color: transparent;
@@ -57,7 +60,7 @@
     display: block;
     width: 1.8rem;
     height: 1.8rem;
-    background-image: url(../img/menu3.png);
+    background-image: url(../img/menu_bk.png);
     background-position: center;
     background-size: cover;
 }
@@ -75,13 +78,20 @@
 #header .top-area .link-wrap {
     display: flex;
 }
-
+#header .top-area .link-wrap > div{
+    display: none;
+}
 .middle-area {
     display: none;
-    color: var(--main-font-wh);
-    /* box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 10%); */
+    color: #000;
+    text-align: right;
+    
 }
+#menu_bar{
+    box-shadow: 0px 10px 20px -8px rgb(0 0 0 / 5%);
+    background-color: #222;
 
+}
 #header .middle-area.is-open {
     display: block;
 }
@@ -91,7 +101,10 @@
     display: block;
     position: relative;
     margin: 0;
-    padding: .8rem 0;
+    /* padding: .8rem 0; */
+    padding: .8rem 0 0;
+    font-weight: 400;
+    color: var(--main-font-wh)
 }
 
 #header .middle-area .nav ul li {
@@ -113,6 +126,10 @@
     left: 0;
     cursor: pointer;
 }
+#header .middle-area .nav>div{
+    border: 1px solid rgb(0 0 0 / 9%);
+    padding: .8rem;
+}
 
 /* input[type="search"]{
     display: block;
@@ -133,10 +150,11 @@
 }
     */
 /* hover style */
-#header .middle-area .nav ul li:hover {
-    background-color: var(--sub-bg-color);
+#header .middle-area .nav ul li:hover ,#header .middle-area .nav ul li:active{
+    /* background-color: var(--sub-bg-color); */
+    color: #fff;
+    transition:  all .4s;
 }
-
 /* --------------- 풋터 ----------------*/
 #footer {
     width: 100%;
@@ -153,13 +171,13 @@
         -- media query 
     ###################################################### */
 @media screen and (max-width: 376px) {
-    #header .top-area .top-title {
+    /* #header .top-area .top-title {
         display: block;
-    }
+    } */
 
-    #header .top-area h1 {
+    /* #header .top-area h1 {
         display: none;
-    }
+    } */
 }
 
 /*스마트폰 가로+세로*/
@@ -180,6 +198,10 @@
 
 /*iphone4와 같은 높은 해상도 가로*/
 @media screen and (min-width: 640px) {
+    .header-wrap {
+        box-shadow:none;
+        border-bottom: 1px solid #f6f6f6;;
+    }
     /* #searchFrm .search{
         padding: .8rem 0;
     } */#header .top-area .menu {
@@ -207,6 +229,7 @@
         justify-content: space-between;
         align-items: center;
         height: 2rem;
+        padding: .8rem 0;
     }
 
     #header .middle-area .nav ul li {
@@ -215,6 +238,17 @@
         text-align: center;
         align-items: center;
         justify-content: center;
+    }
+
+    #header .top-area .link-wrap > div{
+        display: flex;
+        
+    }
+    #header .top-area .link-wrap > div button{
+        margin-left:  12px;
+    }
+    #header .middle-area .nav>div{
+        display: none;
     }
 }
 

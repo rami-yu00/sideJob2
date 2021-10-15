@@ -4,7 +4,7 @@
 ############################################*/
 :root {
     --mid-bg-color: #f3f3f3;
-    --main-bg-color: #607d8b;
+    --main-bg-color: #fff;
     --sub-bg-color: #6f8c9b;
     --main-font-wh: #fbfbfb;
     --main-bg-m-grey: #ddd;
@@ -68,10 +68,22 @@ button, .btn {
     padding: .4rem .8rem;
     cursor: pointer;
     background-color: #fff;
-    color: var(--main-bg-color);
+    color: #000;
     font-weight: bold;
 }
-
+#header button, #header .btn{
+    border: 0;
+    border-radius: 0;
+    padding: .4rem .6rem ;
+}
+#header button:hover, #header .btn:hover {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    /* text-decoration: underline; */
+    color: #3e7fa1;
+    transition: ease all .2s;
+}
 .btn.btn-dk {
     background-color: var(--main-hover-color);
     color: var(--main-font-wh);
