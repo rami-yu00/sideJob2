@@ -14,7 +14,7 @@
             </p>
         </div>
     </footer>
-
+<!-- 로그인팝업 -->
     <article id="popup_login" class="dim-layer">
         <div href="#popup_login" class="dimBg popup_close"></div>
         <div class="pop-layer">
@@ -44,6 +44,7 @@
         </div>
     </article>
 
+<!-- 팝업 모달, 메뉴리스트 script -->
     <script>
         $(function(){
             
@@ -103,13 +104,15 @@
                  //헤더 메뉴리스트 닫기 
                 //  $('#menu_list').slideUp();
                 $('#menu_list').removeClass('is-open');
-            } 
-
-            if(width_size > 640){
+                $('#menu_list').hide();
+            } else if(width_size > 640){
                 $('#menu_list').addClass('is-open');
+                $('#menu_list').show();
             }
-           
-    
+
+            // if(){
+                
+            // }
         });
         </script>
 </body>

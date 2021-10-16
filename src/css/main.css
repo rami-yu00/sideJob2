@@ -21,20 +21,15 @@
 .main-header{
     position: relative;
     overflow: hidden;
-
     min-height: 400px;
     height: 100%;
-
-    /* border-radius: 3px; */
+    border-radius: 3px;
     margin-bottom: .5rem;
-
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-
     font-size: 2.5rem;
     background-color: aliceblue;
-
     
 }
 
@@ -42,10 +37,8 @@
     
     display: block;
     position: absolute;
-
     width: 100%;
     height: 100%;
-    
     object-fit: cover;
     object-position: center;
 }
@@ -124,11 +117,16 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .data-list .list-body .list-item span:not(.noti){
     flex: 0 0 25%;
     text-align: right;
+    font-size: 14px;
+    font-weight: 400;
 }
 .data-list .list-body .list-item .noti, .noti{
     flex: 0 0 auto;
@@ -144,7 +142,7 @@
     display: inline-block;
     padding: 0 5px;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 14px;
 
     background: var(--denger-color);
     color: #fff;
@@ -222,12 +220,19 @@
 .con .con-desc .title{
     margin-bottom: .5rem;
 }
+.con .con-desc .title h4{
+    font-size: 14px;
+    /* font-weight: 400; */
+}
+
 .con .con-desc .title span{
     white-space: nowrap;
     margin-right: .5rem;
+    font-size: 14px;
 }
 .con .con-desc dt{
     display: flex;
+    font-size: 14px;
 }
 .con .con-desc dt.etc{
     justify-content: space-between;   
@@ -242,6 +247,51 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+/*  ########################################################
+
+    *carousel slide
+
+    ########################################################*/
+.carousel{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    
+}
+.carousel > li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /* padding-bottom: 100%; */
+    opacity: 1;
+    animation: slide 12s ease infinite forwards;
+}
+.carousel > li:nth-child(1){
+    opacity:1;
+    z-index: 3;
+}
+.carousel > li:nth-child(2){
+    z-index:2;
+    animation-delay: 4s;
+}
+.carousel > li:nth-child(3){
+    z-index:1;
+    animation-delay: 8s;
+}
+
+@keyframes slide{
+    0%{opacity:1; left:0;}
+    33.33%{opacity:0.5; left:-120%;}
+    34%{opacity:0;}
+    66.66%{left:0; opacity:0;}
+    100%{opacity:1;}
+}
+
+
+
 
 /*스마트폰 가로+세로*/
 @media screen and (min-width: 320px) and (max-width: 480px){
