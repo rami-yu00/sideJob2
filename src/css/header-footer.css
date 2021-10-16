@@ -236,7 +236,7 @@
     }
     
     .pop-container .con-main {
-        margin: 2.5rem;
+        margin: 1rem;
         height: 100%;
         bottom: 0;
         border: 1px solid var(--desc-line-color);

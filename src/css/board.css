@@ -202,7 +202,12 @@
 .sub-table tr:nth-child(1) td:nth-child(2) div span {
     white-space: nowrap;
     margin-right: 8px;
+    
 }
+.sub-table tr:nth-child(1) td:nth-child(2) div > h4{
+    font-size: 14px;
+}
+
 
 .sub-table tr:nth-child(2) td:nth-child(1) div {
     display: flex;
@@ -223,7 +228,7 @@
 } */
 
 .sub-table tr:nth-child(2) td:nth-child(1) div span{
-    font-size: smaller;
+    font-size: 13px;
     color: var(--footer-bg-color);
     display: block;
     border-right: 2px solid var(--desc-line-color);
