@@ -71,6 +71,22 @@ button, .btn {
     color: #000;
     font-weight: bold;
 }
+
+.gb-hr {
+    width: 100%;
+    margin: .8rem 0 0 ;
+    border-bottom: 1px solid var(--desc-line-color);
+}
+
+.gb-hr.hr-bold {
+    margin: 1rem 0 .8rem;
+    border-bottom: 2px solid rgb(102 102 102 / 73%);
+}
+.gb-hr.hr-bold.hrbtm{
+    margin: .8rem 0 1rem;
+}
+
+
 #header button, #header .btn{
     border: 0;
     border-radius: 0;
@@ -84,6 +100,16 @@ button, .btn {
     color: #3e7fa1;
     transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) all .2s;
 }
+
+
+.content-wrap.common{
+    display: block;
+    /* /* padding: 4.6rem .8rem .8rem; */
+    padding: 90px .8rem .8rem;
+    background-color: var(--main-font-wh);
+}
+
+
 #menu_list button, #menu_list .btn{
     
     background-color: transparent;
@@ -133,4 +159,172 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
     background-color: var(--board-col-hover-color);
     border: 1px solid var(--desc-line-color);
     color: #333;
+}
+
+/*  #####################################################
+
+    -- Join STYLE -- 
+    ##################################################### */
+
+#join{
+    background-color: #ccd8de;
+}
+
+.join-hd {
+    margin-bottom: 2rem;
+}
+.join-hd h3{
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+.join-hd > p{
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+.join-main{
+    padding: 1rem;
+    border: 1px solid rgb(141 147 150 / 54%);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+ 
+.join-main #joinFrm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.join-main #joinFrm p label {
+    font-size: 13px;
+    font-weight: bold;
+} 
+.join-main #joinFrm p label .blit{
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+}
+.join-main #joinFrm p label span:not( .blit) {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 5px;
+} 
+
+.join-main #joinFrm input{
+    border: 1px solid var(--desc-line-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.join-main #joinFrm p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#login_Submit_btn {
+    /* color: #fff; */
+    background-color: rgb(0 0 0 / 9%);
+}
+#login_Submit_btn:hover, #login_Submit_btn:active {
+    color: #fbfbfb;
+    background-color: rgb(0 0 0 / 25%);
+    transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) all .2s;
+}
+
+/*스마트폰 가로+세로*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+/*스마트폰 가로*/
+@media screen and (min-width: 321px) {
+}
+
+/*스마트폰 세로*/
+@media screen and (max-width: 320px) {
+}
+
+/*iphone4와 같은 높은 크기세로*/
+@media only screen and(-webkit-min-device-pixel-ratio : 1.5), only screen and(min-device-pixel-ratio : 1.5) {
+}
+
+/*iphone4와 같은 높은 해상도 가로*/
+@media screen and (min-width: 640px) {
+
+    .content-wrap.common{
+        padding: 145px .8rem .8rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    /* .content-wrap.common{
+        width: 720px !important;
+    } */
+    /* #main.join_frm{
+        display: flex;
+    } */
+    /* #main.join_frm  aside{
+        background-color: #666;
+    } */
+}
+
+/* iPad가로+세로 */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px ) {
+}
+
+/* iPad가로*/
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px ) and (orientation : landscape) {
+}
+
+/* iPad세로*/
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px ) and (orientation : portrait) {
+}
+
+/*태블릿 해상도 사이즈*/
+@media screen and (min-width: 768px) and (max-width: 1024px ) {
+}
+
+/*데스크탑 브라우저 가로*/
+@media screen and (min-width: 1025px) {
+   
+}
+
+/*데스크탑 브라우저 가로*/
+@media screen and (min-width: 1225px) {
+}
+
+/*큰 모니터*/
+@media screen and (min-width: 1824px) {
 }

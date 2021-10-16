@@ -6,23 +6,11 @@
 .board {
     display: block;
     /* /* padding: 4.6rem .8rem .8rem; */
-     padding: 90px .8rem .8rem;
+    padding: 90px .8rem .8rem;
     background-color: var(--main-font-wh);
 }
 
-.gb-hr {
-    width: 100%;
-    margin: .8rem 0 0 ;
-    border-bottom: 1px solid var(--desc-line-color);
-}
 
-.gb-hr.hr-bold {
-    margin: 1rem 0 .8rem;
-    border-bottom: 2px solid rgb(102 102 102 / 73%);
-}
-.gb-hr.hr-bold.hrbtm{
-    margin: .8rem 0 1rem;
-}
 .board .board-top .board-header{
     position: relative;
     overflow: hidden;

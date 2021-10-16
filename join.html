@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study World | HOME</title>
+        <link rel="shortcut icon" href="src/img/brand-l.png">
+        <link rel="stylesheet" type="text/css" href="src/css/common.css">
+        <link rel="stylesheet" type="text/css" href="src/css/header-footer.css">
+        <link rel="stylesheet" type="text/css" href="src/css/main.css">
+    </head>
+<body>
+    <div class="header">
+    </div>
+    <main id="main" class="join_frm">
+        <aside>
+            <!-- 아코디언메뉴만들기. -->
+            <a>회원가입</a>
+            <a>로그인</a>
+        </aside>
+        <div class="content-wrap common " id="join">
+            
+            <div>
+                <section class="join-hd">
+                    <h3>회원가입</h3>
+                    <p>사이트 이용에 필요한 정보들을 입력합니다.</p>
+                </section>
+                <section class="join-main">
+                    <form name="joinFrm" id="joinFrm">
+                        <p> <label for="user_id">아이디<span class="blit">*</span><span>사용중인아이디..</span></label> 
+                            <div>
+                                <input type="text" id="user_id" name="user_id" placeholder="4자리~6자리 (영문+숫자+특수문자-_)">
+                                <button>중복확인</button>
+                            </div>
+                        </p>
+                        <p> <label for="user_id">비밀번호<span class="blit">*</span><span>잘못된 형식의 비밀번호 입니다.</span></label>     
+                            <input type="text" id="user_id" name="user_id" placeholder="2자리~6자리 (영문+숫자)" pattern="">
+                            <label for="user_id">비밀번호 확인<span class="blit">*</span></label>
+                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        </p>
+                        <p> <label for="user_id">이름<span class="blit">*</span><span>잘못된 형식의 이름 입니다.</span></label>
+                            <input type="text" id="user_id" name="user_id" placeholder="한글 또는 영문 이름">
+                        </p>
+                        <p> <label for="user_id">성별</label>
+                            <div>
+                                <label for="radio_01">남자<input type="radio" id="radio_01" name="gen"></label>
+                                <label for="radio_02">여자<input type="radio" id="radio_02" name="gen"></label>
+                            </div>
+                        </p>
+                        <p> <label for="user_id">관심분야</label> 
+                            <div>
+                                <label for="checkbox_01">독서<input type="checkbox" id="checkbox_01" name=""></label>
+                                <label for="checkbox_02">게임<input type="checkbox" id="checkbox_02" name=""></label>
+                                <label for="checkbox_03">게임<input type="checkbox" id="checkbox_02" name=""></label>
+                                <label for="checkbox_04">게임<input type="checkbox" id="checkbox_02" name=""></label>
+                            </div>
+                        </p>
+                        <p> <label for="user_id">이메일<span class="blit">*</span><span>잘못된 형식의 이메일 입니다.</span></label>
+                            <input type="email" id="user_id" name="user_id" placeholder="" pattern="" >
+                        </p>
+                        <p> <label for="user_id">전화번호<span class="blit">*</span><span>잘못된 형식의 전화번호 입니다.</span></label> 
+                            <input type="number" id="user_id" name="user_id" placeholder="숫자만입력">
+                        </p>
+                        <p> <label for="user_id">우편번호<span class="blit">*</span><span>잘못된 형식의 우편번호 입니다.</span></label>  
+                            <input type="number" id="user_id" name="user_id" placeholder="숫자만입력">
+                        </p>
+                        <p> <label for="user_id">기본주소<span class="blit">*</span><span>필수 입력 정보 입니다.</span></label>
+                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        </p>
+                        <p> <label for="user_id">상세주소<span class="blit">*</span><span>필수 입력 정보 입니다.</span></label> 
+                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        </p>
+                        
+                        <p>
+                            <div>
+                                <button type="reset">다시작성</button><button>가입하기</button>
+                            </div>
+                        </p>
+                    </form>
+                </section>
+            </div>
+            
+
+        </div>
+    </main>
+    <div class="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $(document).ready(function(){
+                 $(".header").load("header.html");
+                 $(".footer").load("footer.html");
+                /* id 지정을 통해서도 가능합니다. 
+                 $("#header").load("header.html");
+                 */ 
+            });      
+        });
+    </script>
+</body>
+</html>
