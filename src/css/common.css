@@ -186,6 +186,7 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
 }
 
 .join-hd {
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 .join-hd h3{
@@ -304,6 +305,14 @@ thead tr{
     font-weight: 600;
     text-align: left;
 }
+.board.write> thead tr th:nth-child(1){
+    width: 80px;
+    white-space: nowrap;
+    max-width: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
 .board> thead tr:not(:first-child) th:nth-child(2){
     text-align: left;
     font-size: 13px;
@@ -324,9 +333,17 @@ thead tr{
     color: #8d9092;
     
 }
-
+.table > tbody{
+    height: 591px;
+}
 tbody tr .post{
     min-height: 300px;
+}
+tbody tr .post.write{
+    width: 100%;
+}
+tbody tr textarea.post.write{
+    text-align: left;
 }
 .td_cmt_wrap, .tb_comment{
     font-size: 13px;
@@ -416,8 +433,76 @@ tbody tr .post{
     text-align: center;
     font-size: 13px;
 }
+/*갤러리 board write*/
+#gellery_writeFrm .imageView_wrap{
+    width: 100%;
+    min-height: 150px;
+    height: 300px;
+}
+#gellery_writeFrm .imageView_wrap label.imageView{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #dedede;
+    border-radius: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#gellery_writeFrm .imageView_wrap label.imageView >span{
+    position: absolute;
+    top : 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    -moz-transform: translate(-50%, -45%);
+    -ms-transform: translate(-50%, -45%);
+    -o-transform: translate(-50%, -45%);
+}
 
+.post.write.pst_gley{
+    min-height: 200px;
+    border: 1px solid #e8e8e8;
+}
+.imageView #multiple-container > img{
+    z-index: 10;
+}
+#multiple-container {
+    position: absolute;
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    padding: 14px;
+}
 
+#multiple-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#file-name{
+    font-weight: 500;
+}
+
+.post_img{
+    position:relative;
+    width: 100%;
+    height: 500px;
+    min-height: 200px;
+    box-sizing: border-box;
+    background-color: #dddddd70;
+}
+.post_img > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+tbody tr .bd_gallery.post {
+    min-height: 30px;
+}
 /*스마트폰 가로+세로*/
 @media screen and (min-width: 320px) and (max-width: 480px) {
 }

@@ -17,7 +17,7 @@
         <section class="common content-wrap">
             <div><a href="index.html">Home</a> 
                 <span> > </span> 
-                공지사항 
+                자유게시판
                 <span> > </span> 
                 <strong>게시글 작성</strong>
             </div>
@@ -31,9 +31,21 @@
                 </section>
                 <form>
                     <div class="post-main">
-                        <table class="board bd-notice-table">
+                        <table class="board bd-notice-table write">
                             <thead>
                                 <tr></tr>
+                                <tr>
+                                    <th>
+                                        분류
+                                    </th>
+                                    <th colspan="3">
+                                       <select>
+                                           <option>선택</option>
+                                           <option>일반</option>
+                                           <option>스터디</option>
+                                       </select>
+                                    </th>
+                                </tr>
                                 <tr>
                                     <th>
                                         제목
@@ -50,15 +62,7 @@
                                         <input type="text" value="작성자1" placeholder="" readonly>
                                     </th>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        알림 설정
-                                    </th>
-                                    <th colspan="3">
-                                        <label>미설정<input type="radio" value="false" checked></label>
-                                        <label>설정함<input type="radio" value="true"></label>
-                                    </th>
-                                </tr>
+                                
                             </thead>
                             <tbody>
                                 <!-- <tr >
@@ -77,8 +81,8 @@
                     </div>
                 </form>
                 <section class="board_link_wrap">
-                    <a href="" class="btn btn-wh">목록으로</a>
-                    <a href="" class="btn btn-wh">작성하기</a>
+                    <a href="freePosting.html" class="btn btn-wh">목록으로</a>
+                    <a href="freePosting_board.html" class="btn btn-wh">작성하기</a>
                 </section>
             </div>
         </div>

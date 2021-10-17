@@ -17,9 +17,9 @@
         <section class="common content-wrap">
             <div><a href="index.html">Home</a> 
                 <span> > </span> 
-                공지사항 
+                자유게시판
                 <span> > </span> 
-                <strong>게시글 작성</strong>
+                <strong>게시글 수정</strong>
             </div>
         </section>
     </article>
@@ -31,15 +31,27 @@
                 </section>
                 <form>
                     <div class="post-main">
-                        <table class="board bd-notice-table">
+                        <table class="board bd-notice-table write">
                             <thead>
                                 <tr></tr>
+                                <tr>
+                                    <th>
+                                        분류
+                                    </th>
+                                    <th colspan="3">
+                                       <select>
+                                           <option>선택</option>
+                                           <option>일반</option>
+                                           <option selected>스터디</option>
+                                       </select>
+                                    </th>
+                                </tr>
                                 <tr>
                                     <th>
                                         제목
                                     </th>
                                     <th colspan="3">
-                                        <input type="text" placeholder="제목을 입력해 주세요.">
+                                        <input type="text" placeholder="제목을 입력해 주세요." value="봉천동 스터디 맴버 구해요">
                                     </th>
                                 </tr>
                                 <tr>
@@ -47,28 +59,19 @@
                                         작성자
                                     </th>
                                     <th colspan="3">
-                                        <input type="text" value="작성자1" placeholder="" readonly>
+                                        <input type="text" value="이웃사람" placeholder="" readonly>
                                     </th>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        알림 설정
-                                    </th>
-                                    <th colspan="3">
-                                        <label>미설정<input type="radio" value="false" checked></label>
-                                        <label>설정함<input type="radio" value="true"></label>
-                                    </th>
-                                </tr>
+                                
                             </thead>
                             <tbody>
-                                <!-- <tr >
-                                    <td class="post-info" colspan="4" ></td>
-                                </tr> -->
-                                <!-- post 내용 -->
                                 <tr>
                                 
                                     <td colspan="4">
-                                        <textarea class="post write"></textarea>
+<textarea class="post write">포스트 내용 
+출력
+포스트 내용 출력
+</textarea>
                                     </td>
                                 </tr>
                                 
@@ -77,8 +80,8 @@
                     </div>
                 </form>
                 <section class="board_link_wrap">
-                    <a href="" class="btn btn-wh">목록으로</a>
-                    <a href="" class="btn btn-wh">작성하기</a>
+                    <a href="freePosting.html" class="btn btn-wh">목록으로</a>
+                    <a href="freePosting_board.html" class="btn btn-wh">작성하기</a>
                 </section>
             </div>
         </div>
