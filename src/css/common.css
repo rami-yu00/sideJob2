@@ -24,7 +24,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
 }
-
+.red{
+    color: red !important;
+    font-weight: 600;
+}
+.blck-red{
+    border: 2px solid red !important;
+}
+.grren{
+    color: green !important;
+    font-weight: 600;
+}
+.blck-green{
+    border: 2px solid green !important;
+}
 html, body {
     margin: 0 auto;
     min-width: 100%;
@@ -225,7 +238,7 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
     margin-left: 5px;
 } 
 
-.join-main #joinFrm input{
+.join-main #joinFrm input:not(input[type="button"]){
     border: 1px solid var(--desc-line-color);
     padding: 10px;
     margin-bottom: 10px;
@@ -252,6 +265,15 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
 
     -- notice_board STYLE -- 
     ##################################################### */
+.board.write input[type="text"], .board.write select {
+    border: 1px solid #dddddda8;
+    padding: 6px ;
+    border-radius: 2px;
+}
+.board.write input[type="text"]{
+    width: 100%;
+    box-sizing: border-box;
+}
 #notice_post.content-wrap.common > div{
     display: flex;
     flex-direction: column;
@@ -528,7 +550,9 @@ tbody tr .bd_gallery.post {
     .content-wrap.common.body{
         padding: .8rem .8rem;
     }
-
+    #join > div {
+        padding: 2rem 4rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -541,6 +565,9 @@ tbody tr .bd_gallery.post {
     /* #main.join_frm  aside{
         background-color: #666;
     } */
+    #join > div {
+        padding: 1.5rem 5rem;
+    }
 }
 
 /* iPad가로+세로 */
@@ -557,11 +584,14 @@ tbody tr .bd_gallery.post {
 
 /*태블릿 해상도 사이즈*/
 @media screen and (min-width: 768px) and (max-width: 1024px ) {
+    
 }
 
 /*데스크탑 브라우저 가로*/
 @media screen and (min-width: 1025px) {
-   
+    #join > div {
+        padding: 1.5rem 8rem;
+    }
 }
 
 /*데스크탑 브라우저 가로*/

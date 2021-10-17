@@ -30,54 +30,60 @@
                     <p>사이트 이용에 필요한 정보들을 입력합니다.</p>
                 </section>
                 <section class="join-main">
-                    <form name="joinFrm" id="joinFrm">
-                        <p> <label for="user_id">아이디<span class="blit">*</span><span>사용중인아이디..</span></label> 
+                    <form name="joinFrm" id="joinFrm" action="#;">
+                        <p> <label>아이디<span class="blit">*</span><span id="user_id_cmt"></span></label> 
                             <div>
-                                <input type="text" id="user_id" name="user_id" placeholder="4자리~6자리 (영문+숫자+특수문자-_)">
+                                <input type="text" id="user_id" name="user_id" placeholder="4자리~12자리 (영문+숫자+특수문자-_)" >
                                 <button>중복확인</button>
+                                <!-- pattern="^([a-z0-9_]){4,12}$" -->
                             </div>
                         </p>
-                        <p> <label for="user_id">비밀번호<span class="blit">*</span><span>잘못된 형식의 비밀번호 입니다.</span></label>     
-                            <input type="text" id="user_id" name="user_id" placeholder="2자리~6자리 (영문+숫자)" pattern="">
-                            <label for="user_id">비밀번호 확인<span class="blit">*</span></label>
-                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        <p> <label for="">비밀번호<span class="blit">*</span><span id="user_pw_cmt"></span></label>     
+                            <input type="text" id="user_pw1" name="user_pw1" placeholder="4자리~12자리 (영문+숫자)" >
+                            <!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$" -->
+                            <label for="">비밀번호 확인<span class="blit">*</span></label>
+                            <input type="text" id="user_pw2" name="user_pw2" placeholder="" >
+                            <!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,12}$" -->
                         </p>
-                        <p> <label for="user_id">이름<span class="blit">*</span><span>잘못된 형식의 이름 입니다.</span></label>
-                            <input type="text" id="user_id" name="user_id" placeholder="한글 또는 영문 이름">
+                        <p> <label for="">이름<span class="blit">*</span><span id="user_name_cmt"></span></label>
+                            <input type="text" id="user_name" name="user_name" placeholder="한글 또는 영문 이름 "  >
+                            <!-- pattern="[^!@#$%^&*()_-+=[]{}~?:;`|/<>'"]+" -->
                         </p>
-                        <p> <label for="user_id">성별</label>
+                        <p> <label for="">성별<span class="blit">*</span><span id="user_gender_cmt"></span></label>
                             <div>
-                                <label for="radio_01">남자<input type="radio" id="radio_01" name="gen"></label>
-                                <label for="radio_02">여자<input type="radio" id="radio_02" name="gen"></label>
+                                <label for="radio_01">남자<input type="radio" id="radio_01" name="user_gender"></label>
+                                <label for="radio_02">여자<input type="radio" id="radio_02" name="user_gender"></label>
                             </div>
                         </p>
-                        <p> <label for="user_id">관심분야</label> 
+                        <p> <label for="">관심분야<span class="blit">*</span><span id="user_hobby_cmt"></span></label> 
                             <div>
-                                <label for="checkbox_01">독서<input type="checkbox" id="checkbox_01" name=""></label>
-                                <label for="checkbox_02">게임<input type="checkbox" id="checkbox_02" name=""></label>
-                                <label for="checkbox_03">게임<input type="checkbox" id="checkbox_02" name=""></label>
-                                <label for="checkbox_04">게임<input type="checkbox" id="checkbox_02" name=""></label>
+                                <label for="checkbox_01">독서<input type="checkbox" id="checkbox_01" name="user_hobby" value="read a book"></label>
+                                <label for="checkbox_02">게임<input type="checkbox" id="checkbox_02" name="user_hobby" value="game"></label>
+                                <label for="checkbox_03">공부<input type="checkbox" id="checkbox_03" name="user_hobby" value="study"></label>
+                                <label for="checkbox_04">운동<input type="checkbox" id="checkbox_04" name="user_hobby" value="play"></label>
                             </div>
                         </p>
-                        <p> <label for="user_id">이메일<span class="blit">*</span><span>잘못된 형식의 이메일 입니다.</span></label>
-                            <input type="email" id="user_id" name="user_id" placeholder="" pattern="" >
+                        <p> <label for="">이메일<span class="blit">*</span><span id="user_email_cmt" ></span></label>
+                            <input type="email" id="user_email" name="user_email" placeholder="" >
+                            <!--  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -->
                         </p>
-                        <p> <label for="user_id">전화번호<span class="blit">*</span><span>잘못된 형식의 전화번호 입니다.</span></label> 
-                            <input type="number" id="user_id" name="user_id" placeholder="숫자만입력">
+                        <p> <label for="">전화번호<span class="blit">*</span><span id="user_phone_cmt"></span></label> 
+                            <input type="text" id="user_phone" name="user_phone" placeholder="숫자만입력">
                         </p>
-                        <p> <label for="user_id">우편번호<span class="blit">*</span><span>잘못된 형식의 우편번호 입니다.</span></label>  
-                            <input type="number" id="user_id" name="user_id" placeholder="숫자만입력">
+                        <p> <label for="">우편번호<span class="blit">*</span><span id="user_postNo_cmt"></span></label>  
+                            <input type="text" id="user_postNo" name="user_postNo" placeholder="숫자만입력">
                         </p>
-                        <p> <label for="user_id">기본주소<span class="blit">*</span><span>필수 입력 정보 입니다.</span></label>
-                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        <p> <label for="">기본주소<span class="blit">*</span><span id="user_add1_cmt"></span></label>
+                            <input type="text" id="user_add1" name="user_add1" placeholder="">
                         </p>
-                        <p> <label for="user_id">상세주소<span class="blit">*</span><span>필수 입력 정보 입니다.</span></label> 
-                            <input type="text" id="user_id" name="user_id" placeholder="">
+                        <p> <label for="">상세주소<span class="blit">*</span><span id="user_add2_cmt"></span></label> 
+                            <input type="text" id="user_add2" name="user_add2" placeholder="">
                         </p>
                         
                         <p>
                             <div>
-                                <button type="reset">다시작성</button><button>가입하기</button>
+                                <button type="reset" value="입력취소">입력취소</button>
+                                <input type="button" class="btn" id="joinBtn" onclick="checkNull()"value="가입하기">
                             </div>
                         </p>
                     </form>
@@ -99,6 +105,165 @@
                  */ 
             });      
         });
+
+        
+
+        function checkNull(){
+
+            //취미생활체크 도전 
+            var chk=false;
+            var size=joinFrm.user_hobby.length;
+            for(var i=0; i<size; i++){
+                if(joinFrm.user_hobby[i].checked==true){
+                    chk=true;
+                    break;
+                }
+            }
+            
+            var user_id = $('#user_id').val();
+            var user_pw1 = $('#user_pw1').val();
+            var user_pw2 = $('#user_pw2').val();
+            var user_name = $('#user_name').val();
+            var user_gender = joinFrm.user_gender;  //lsit
+            var user_hobby = joinFrm.user_hobby;
+            var user_email = $('#user_email').val();
+            var user_phone = $('#user_phone').val();
+            var user_postNo = $('#user_postNo').val();
+            var user_add1 = $('#user_add1').val();
+            var user_add2 = $('#user_add2').val();
+
+            if (user_id == null || user_id ==""){
+                $('#user_id_cmt').html('아이디를 입력하세요');
+                $('#user_id_cmt').addClass('red');
+                $('#user_id').addClass('blck-red');
+                $('#user_id').focus();
+                return ;
+            }else{
+                $('#user_id_cmt').html('');
+                $('#user_id_cmt').removeClass('red');
+                $('#user_id').removeClass('blck-red');
+            }
+
+            if (user_pw1 == null || user_pw1 ==""){
+                $('#user_pw_cmt').html('비밀번호를 입력하세요');
+                $('#user_pw_cmt').addClass('red');
+                $('#user_pw1').addClass('blck-red');
+                $('#user_pw1').focus();
+                return ;
+            }else{
+                $('#user_pw_cmt').html('');
+                $('#user_pw_cmt').removeClass('red');
+                $('#user_pw1').removeClass('blck-red');
+            }
+
+            if (user_pw2 == null || user_pw2 ==""){
+                $('#user_pw_cmt').html('비밀번호 확인을 입력하세요');
+                $('#user_pw_cmt').addClass('red');
+                $('#user_pw2').addClass('blck-red');
+                $('#user_pw2').focus();
+                return ;
+            }else{
+                $('#user_pw_cmt').html('');
+                $('#user_pw_cmt').removeClass('red');
+                $('#user_pw2').removeClass('blck-red');
+            }
+
+            if (user_name == null || user_name ==""){
+                $('#user_name_cmt').html('이름을 입력하세요');
+                $('#user_pw_cmt').addClass('red');
+                $('#user_name').addClass('blck-red');
+                $('#user_name').focus();
+                return ;
+            }else{
+                $('#user_name_cmt').html('');
+                $('#user_name_cmt').removeClass('red');
+                $('#user_name').removeClass('blck-red');
+            }
+
+            if(joinFrm.user_gender[0].checked==false  && joinFrm.user_gender[1].checked==false){
+                $('#user_gender_cmt').html('성별을 선택해주세요');
+                $('#user_gender_cmt').addClass('red');
+                joinFrm.user_gender[0].focus();
+                return  ;
+            }else{
+                $('#user_gender_cmt').html('');
+                $('#user_gender_cmt').removeClass('red');
+            }
+
+            if(chk==false){
+                $('#user_hobby_cmt').html('관심분야 하나선택은 필수옵션입니다');
+                $('#user_hobby_cmt').addClass('red');
+                joinFrm.user_hobby[0].focus();
+                return  ; 
+            }else{
+                $('#user_hobby_cmt').html('');
+                $('#user_hobby_cmt').removeClass('red');
+            }
+
+            
+            if (user_email == null || user_email ==""){
+                $('#user_email_cmt').html('이메일을 입력하세요');
+                $('#user_email_cmt').addClass('red');
+                $('#user_email').addClass('blck-red');
+                $('#user_email').focus();
+                return ;
+            }else{
+                $('#user_email_cmt').html('');
+                $('#user_email_cmt').removeClass('red');
+                $('#user_email').removeClass('blck-red');
+            }
+
+            if (user_phone == null || user_phone ==""){
+                $('#user_phone_cmt').html('전화번호를 입력하세요');
+                $('#user_phone_cmt').addClass('red');
+                $('#user_phone').addClass('blck-red');
+                $('#user_phone').focus();
+                return ;
+            }else{
+                $('#user_phone_cmt').html('');
+                $('#user_phone_cmt').removeClass('red');
+                $('#user_phone').removeClass('blck-red');
+            }
+
+            if (user_postNo == null || user_postNo ==""){
+                $('#user_postNo_cmt').html('우편번호를 입력하세요');
+                $('#user_postNo_cmt').addClass('red');
+                $('#user_postNo').addClass('blck-red');
+                $('#user_postNo').focus();
+                return ;
+            }else{
+                $('#user_postNo_cmt').html('');
+                $('#user_postNo_cmt').removeClass('red');
+                $('#user_postNo').removeClass('blck-red');
+            }
+
+            if (user_add1 == null || user_add1 ==""){
+                $('#user_add1_cmt').html('기본주소를 입력하세요');
+                $('#user_add1_cmt').addClass('red');
+                $('#user_add1').addClass('blck-red');
+                $('#user_add1').focus();
+                return ;
+            }else{
+                $('#user_add1_cmt').html('');
+                $('#user_add1_cmt').removeClass('red');
+                $('#user_add1').removeClass('blck-red');
+            }
+
+            
+            if (user_add2 == null || user_add2 ==""){
+                $('#user_add2_cmt').html('상세주소를 입력하세요');
+                $('#user_add2_cmt').addClass('red');
+                $('#user_add2').addClass('blck-red');
+                $('#user_add2').focus();
+                return ;
+            }else{
+                $('#user_add2_cmt').html('');
+                $('#user_add2_cmt').removeClass('red');
+                $('#user_add2').removeClass('blck-red');
+            }
+
+            
+        }//end
     </script>
 </body>
 </html>
