@@ -43,11 +43,12 @@ html::-webkit-scrollbar , body::-webkit-scrollbar {
     /* Chrome, Safari, Opera*/
 }
 
+
 :focus {
     outline: 0;
 }
 
-div {
+div, article, section,p {
     box-sizing: border-box;
 }
 
@@ -86,7 +87,19 @@ button, .btn {
     margin: .8rem 0 1rem;
 }
 
-
+.depth{
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+}
+.depth section div{
+    font-size: 13px;
+    color: #333;
+}
+.depth section div span{
+    font-weight: bolder;
+    color: var(--footer-font-rgrey);
+}
 #header button, #header .btn{
     border: 0;
     border-radius: 0;
@@ -105,10 +118,12 @@ button, .btn {
 .content-wrap.common{
     display: block;
     /* /* padding: 4.6rem .8rem .8rem; */
-    padding: 90px .8rem .8rem;
+    padding: 82px .8rem .8rem;
     background-color: var(--main-font-wh);
 }
-
+.content-wrap.common.body{
+    padding: .8rem .8rem;
+}
 
 #menu_list button, #menu_list .btn{
     
@@ -222,37 +237,6 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
     align-items: flex-start;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #login_Submit_btn {
     /* color: #fff; */
     background-color: rgb(0 0 0 / 9%);
@@ -262,6 +246,177 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
     background-color: rgb(0 0 0 / 25%);
     transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) all .2s;
 }
+
+/*  #####################################################
+
+    -- notice_board STYLE -- 
+    ##################################################### */
+#notice_post.content-wrap.common > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: stretch;
+}
+.post-hd{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.post-main{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+}
+table.board.bd-notice-table{
+    border-top: 2px solid #333;
+    border-collapse: collapse;
+    font-size: 14px;
+    /* margin: 0 auto; */
+    border-bottom: 2px solid #333;
+}
+
+.bd-notice-table tbody td{
+    padding: 10px;
+}
+
+.post-info{
+    width: 80px;
+}
+.bd-notice-table .tb-noti-postTitle{
+    display: flex;
+    text-align: left;
+}
+thead tr{
+    background-color: #e8e8e8;
+}
+.board> thead tr:nth-child(1) th:nth-child(2){
+    text-align: right;
+}
+.board> thead tr:not(:first-child) th:nth-child(1){
+    width: 50px;
+    white-space: nowrap;
+    max-width: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+.board> thead tr:not(:first-child) th:nth-child(2){
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #f3f3f3;
+    /* border: 3px solid #e8e8e8; */
+}
+.board> thead th{padding : 12px; border-bottom: #6f8c9b;}
+
+.board> tbody tr:nth-child(1){
+    border-bottom: 0;
+}
+.board> tbody tr:nth-child(1) .post-info{
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 400;
+    color: #8d9092;
+    
+}
+
+tbody tr .post{
+    min-height: 300px;
+}
+.td_cmt_wrap, .tb_comment{
+    font-size: 13px;
+}
+.td_cmt_wrap > span{
+    font-size: 12px;
+    color: #aaa;
+    font-weight: bold;
+}
+
+
+.td_cmt_wrap > .gb-hr.hr-bold {
+    margin: .8rem 0 .8rem;
+}
+#commentFrm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-height: 120px;
+}
+#commentFrm > div{
+    display: flex;
+    flex: 1 1 auto;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+#commentFrm > div > label{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+
+}
+#commentFrm > div > textarea{
+    flex: 1 1 auto;
+    border:  1px solid #ddd;
+    overflow: hidden;
+
+} 
+#commentFrm > div > input{
+    margin-left: 5px;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    min-width: 20px;
+    max-width: 100px;
+}
+.tb_comment {
+    border-collapse: collapse;
+    width: 100%;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.tb_comment thead tr{
+    background-color: transparent;
+}
+.tb_comment thead tr:nth-child(1) th{
+    text-align: left;
+    border-bottom: 2px solid #666;
+    font-size: 12px;
+    color: #aaa;
+}
+.tb_comment thead tr:nth-child(2) th{
+    
+    border-bottom: 1px solid #ddd;
+}
+.tb_comment thead tr th, .tb_comment tbody tr td {
+    padding: 12px 0;
+    text-align: center;
+}
+.tb_comment tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.tb_comment thead tr:nth-child(2) th:nth-child(2), .tb_comment tbody tr td:nth-child(2){
+    text-align: left;
+}
+.tb_comment thead tr:nth-child(2) th:nth-child(4), .tb_comment tbody tr td:nth-child(4){
+    width: 70px;   
+}
+
+.board_link_wrap{
+    padding: 2rem 0 3rem 0;
+    text-align: center;
+    font-size: 13px;
+}
+
 
 /*스마트폰 가로+세로*/
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -284,6 +439,9 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
 
     .content-wrap.common{
         padding: 145px .8rem .8rem;
+    }
+    .content-wrap.common.body{
+        padding: .8rem .8rem;
     }
 
 }
