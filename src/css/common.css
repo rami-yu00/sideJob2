@@ -186,6 +186,7 @@ button.btn-wh:hover, .btn.btn-wh:hover, button.btn-wh:active, .btn.btn-wh:active
 }
 
 .join-hd {
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 .join-hd h3{
@@ -304,6 +305,14 @@ thead tr{
     font-weight: 600;
     text-align: left;
 }
+.board.write> thead tr th:nth-child(1){
+    width: 80px;
+    white-space: nowrap;
+    max-width: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
 .board> thead tr:not(:first-child) th:nth-child(2){
     text-align: left;
     font-size: 13px;
@@ -324,9 +333,17 @@ thead tr{
     color: #8d9092;
     
 }
-
+.table > tbody{
+    height: 591px;
+}
 tbody tr .post{
     min-height: 300px;
+}
+tbody tr .post.write{
+    width: 100%;
+}
+tbody tr textarea.post.write{
+    text-align: left;
 }
 .td_cmt_wrap, .tb_comment{
     font-size: 13px;
